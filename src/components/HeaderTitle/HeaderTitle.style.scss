@@ -1,0 +1,32 @@
+@import "../../global.scss";
+
+$text-color: hsl(0, 0%, 40%);
+
+.header-title {
+	width: 60%;
+
+	&__title {
+		font-weight: 700;
+	}
+
+	&__btn {
+		margin-bottom: 0.5rem;
+	}
+
+	&__members {
+		display: flex;
+		justify-content: flex-start;
+		width: max-content;
+		height: 2.5rem;
+	}
+
+	p {
+		font-size: 0.75rem;
+		color: $text-color;
+	}
+
+	.highlight {
+		color: map-get($map: $btn, $key: background);
+		font-weight: 500;
+	}
+}
