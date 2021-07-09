@@ -1,0 +1,23 @@
+@import "../../size.global.scss";
+
+.btn {
+	font-size: $medium-font;
+	color: map-get($map: $btn, $key: font-color);
+	background-color: map-get($map: $btn, $key: background);
+	padding: 0.55rem 1.15rem;
+	border: 0.1rem solid transparent;
+
+	&:hover {
+		background-color: map-get($map: $btn, $key: font-color);
+		color: map-get($map: $btn, $key: background);
+		border: 0.1rem solid map-get($map: $btn, $key: background);
+	}
+
+	&--bold {
+		font-weight: 700;
+	}
+
+	&--thin {
+		font-weight: 300;
+	}
+}

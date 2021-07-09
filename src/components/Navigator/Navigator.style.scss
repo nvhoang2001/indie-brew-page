@@ -1,0 +1,22 @@
+@import "../../size.global.scss";
+
+.navigator {
+	display: flex;
+	min-width: 30%;
+
+	&__links {
+		display: flex;
+		margin-right: 1rem;
+		// min-width: 100%;
+		// justify-content: space-between;
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: $medium-font;
+		font-weight: 500;
+		margin: 0 0.5rem;
+	}
+}
