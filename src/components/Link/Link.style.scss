@@ -1,0 +1,9 @@
+$underscore-color: rgb(0, 255, 255);
+
+.link {
+	background: linear-gradient($underscore-color 0 0) 0 100% / var(--d, 0) 0.1rem no-repeat;
+	transition: 0.5s;
+	&:hover {
+		--d: 100%;
+	}
+}
