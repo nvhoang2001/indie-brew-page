@@ -6,11 +6,15 @@
 	background-color: map-get($map: $btn, $key: background);
 	padding: 0.55rem 1.15rem;
 	border: 0.1rem solid transparent;
+	transition-property: all;
+	transition-duration: 0.25s;
+
+	border-radius: 0.25rem;
 
 	&:hover {
 		background-color: map-get($map: $btn, $key: font-color);
 		color: map-get($map: $btn, $key: background);
-		border: 0.1rem solid map-get($map: $btn, $key: background);
+		border-color: map-get($map: $btn, $key: background);
 	}
 
 	&--bold {
