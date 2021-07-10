@@ -1,4 +1,4 @@
-$background: blue;
+$background: #ebe2ee;
 
 .circle-mist {
 	position: absolute;
@@ -8,5 +8,4 @@ $background: blue;
 	background: radial-gradient(circle at 0 0, $background 0%, rgba(255, 255, 255, 0) 50%);
 	height: 35rem;
 	width: 30rem;
-	filter: opacity(50%);
 }

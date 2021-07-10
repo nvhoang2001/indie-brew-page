@@ -7,6 +7,10 @@ h1 {
 	font-size: 2rem;
 }
 
+h2 {
+	font-size: 1.5rem;
+}
+
 body {
 	padding: 0 3.5rem;
 	font-family: "Roboto", sans-serif;

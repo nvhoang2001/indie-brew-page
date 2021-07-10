@@ -1,0 +1,10 @@
+.resources {
+	display: flex;
+	justify-content: space-between;
+
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+	&__img {
+		width: 25%;
+	}
+}

@@ -1,0 +1,15 @@
+.waitisit {
+	display: flex;
+	justify-content: space-between;
+
+	margin-top: 3rem;
+	margin-bottom: 5rem;
+	&__des {
+		order: 1;
+		width: 51.75%;
+	}
+
+	&__img {
+		width: 40%;
+	}
+}

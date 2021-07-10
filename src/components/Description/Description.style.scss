@@ -1,0 +1,14 @@
+.description {
+	font-size: 0.75rem;
+	width: 57%;
+
+	&__title {
+		font-weight: 700;
+	}
+
+	&__content {
+		color: #666;
+		margin: 0.5rem 0;
+		line-height: 1.25;
+	}
+}
