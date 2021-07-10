@@ -5,14 +5,15 @@ import { ReactComponent as MemberImage } from "../../Assets/User Avatars.svg";
 import "./HeaderTitle.style.scss";
 
 const HeaderTitle = () => {
-	console.log(MemberImage);
+	const textContent =
+		"With IndieBrew, get personal feeds from resources all around the web, including Reddit, HackerNews, IndieHackers, and much more.";
 
 	return (
 		<div className="header-title">
 			<h1 className="header-title__title">
 				Your weekly <br /> personal feed digest.
 			</h1>
-			<TextDescription content="With IndieBrew, get personal feeds from resources all around the web, including Reddit, HackerNews, IndieHackers, and much more." />
+			<TextDescription content={textContent} className="header-title__text" />
 			<CustomButton
 				className="header-title__btn"
 				content="Get Started"

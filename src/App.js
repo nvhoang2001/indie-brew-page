@@ -6,6 +6,7 @@ import Waitisit from "./sections/Waitisit/Waitisit.component";
 
 import "./reset-css.scss";
 import "./App.css";
+import Footer from "./sections/Footer/Footer.component";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<HeaderImage />
 			<Resources />
 			<Waitisit />
+			<Footer />
 		</div>
 	);
 }

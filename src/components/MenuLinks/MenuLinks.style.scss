@@ -1,0 +1,29 @@
+@import "../../global.scss";
+
+.menu-links {
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__links {
+		width: 22.5%;
+	}
+
+	&__title {
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
+
+	&__link {
+		font-size: $medium-font;
+		padding: 0.5rem 0;
+		display: block;
+		width: fit-content;
+	}
+}

@@ -9,6 +9,10 @@ $text-color: hsl(0, 0%, 40%);
 		font-weight: 700;
 	}
 
+	&__text {
+		margin: 1rem 0;
+	}
+
 	&__btn {
 		margin-bottom: 0.5rem;
 	}

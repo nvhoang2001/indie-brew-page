@@ -1,0 +1,16 @@
+.footer-content {
+	max-width: 35%;
+
+	&__title {
+		font-weight: 700;
+	}
+
+	&__content {
+		margin: 0.75rem 0;
+		line-height: 1.25;
+	}
+
+	&__maker {
+		margin-top: 0.5rem;
+	}
+}
