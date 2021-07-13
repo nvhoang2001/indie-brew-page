@@ -1,5 +1,7 @@
+@import "../../global.scss";
+
 $underscore-color: rgb(0, 255, 255);
-$small-screen-active: rgba(0, 0, 255, 0.5);
+$small-screen-active-color: rgba(0, 0, 255, 0.5);
 
 .link {
 	background: linear-gradient($underscore-color 0 0) 0 100% / var(--d, 0) 0.1rem no-repeat;
@@ -9,13 +11,13 @@ $small-screen-active: rgba(0, 0, 255, 0.5);
 	}
 }
 
-// Query for portrait ipad
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+// Query for landscape ipad and down screen
+@media only screen and (max-device-width: $ipad-landscape-screen-max) {
 	.link {
 		background: none;
 
 		&:active {
-			background: $small-screen-active;
+			background: $small-screen-active-color;
 		}
 	}
 }

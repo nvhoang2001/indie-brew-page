@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .header {
 	margin-top: 2rem;
 
@@ -11,7 +13,7 @@
 }
 
 // Query for portrait ipad
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen and (max-device-width: $ipad-portrait-screen-max) and (orientation: portrait) {
 	.header {
 		&__logo {
 			width: 30%;
@@ -22,6 +24,23 @@
 			justify-content: flex-end;
 			* {
 				font-size: 1.25rem;
+			}
+		}
+	}
+}
+
+// Query for landscape ipad
+@media only screen and (max-device-width: $ipad-landscape-screen-max) and (orientation: landscape) {
+	.header {
+		&__logo {
+			width: 22.5%;
+		}
+
+		&__nav {
+			width: 60%;
+			justify-content: flex-end;
+			* {
+				font-size: 1rem;
 			}
 		}
 	}

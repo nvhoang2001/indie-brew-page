@@ -12,6 +12,16 @@
 	border-color: transparent;
 }
 
+@mixin custom-btn--ipad($selector) {
+	#{$selector}:hover {
+		@include custom-btn--clear-effect();
+	}
+
+	#{$selector}:active {
+		@include custom-btn--invert();
+	}
+}
+
 .btn {
 	font-size: $medium-font;
 	color: map-get($map: $btn, $key: font-color);
@@ -34,15 +44,16 @@
 		font-weight: 300;
 	}
 }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+// Query for portrait ipad
+@media only screen and (max-device-width: $ipad-portrait-screen-max) and (orientation: portrait) {
 	.btn {
-		&:hover {
-			@include custom-btn--clear-effect();
-		}
+		@include custom-btn--ipad("&");
+	}
+}
 
-		&:active {
-			@include custom-btn--invert();
-		}
+// Query for landscape ipad
+@media only screen and (max-device-width: $ipad-landscape-screen-max) and (orientation: landscape) {
+	.btn {
+		@include custom-btn--ipad("&");
 	}
 }
