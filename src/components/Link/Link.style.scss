@@ -1,9 +1,21 @@
 $underscore-color: rgb(0, 255, 255);
+$small-screen-active: rgba(0, 0, 255, 0.5);
 
 .link {
 	background: linear-gradient($underscore-color 0 0) 0 100% / var(--d, 0) 0.1rem no-repeat;
 	transition: 0.5s;
 	&:hover {
 		--d: 100%;
+	}
+}
+
+// Query for portrait ipad
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	.link {
+		background: none;
+
+		&:active {
+			background: $small-screen-active;
+		}
 	}
 }

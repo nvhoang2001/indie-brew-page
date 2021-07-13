@@ -1,5 +1,17 @@
 @import "../../global.scss";
 
+@mixin custom-btn--invert {
+	background-color: map-get($map: $btn, $key: transparent);
+	color: map-get($map: $btn, $key: background);
+	border-color: map-get($map: $btn, $key: background);
+}
+
+@mixin custom-btn--clear-effect {
+	color: map-get($map: $btn, $key: font-color);
+	background-color: map-get($map: $btn, $key: background);
+	border-color: transparent;
+}
+
 .btn {
 	font-size: $medium-font;
 	color: map-get($map: $btn, $key: font-color);
@@ -11,9 +23,7 @@
 	border-radius: 0.25rem;
 
 	&:hover {
-		background-color: map-get($map: $btn, $key: transparent);
-		color: map-get($map: $btn, $key: background);
-		border-color: map-get($map: $btn, $key: background);
+		@include custom-btn--invert();
 	}
 
 	&--bold {
@@ -22,5 +32,17 @@
 
 	&--thin {
 		font-weight: 300;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	.btn {
+		&:hover {
+			@include custom-btn--clear-effect();
+		}
+
+		&:active {
+			@include custom-btn--invert();
+		}
 	}
 }
