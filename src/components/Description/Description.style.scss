@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .description {
 	font-size: 0.75rem;
 	width: 57%;
@@ -10,5 +12,20 @@
 		color: #666;
 		margin: 0.5rem 0;
 		line-height: 1.25;
+	}
+}
+
+// Query for both portrait and landscape ipad
+@media only screen and (max-device-width: $ipad-landscape-screen-max) {
+	.description {
+		font-size: 1rem;
+		width: 60%;
+
+		&__title {
+			line-height: 1.25;
+		}
+		&__content {
+			line-height: 1.5;
+		}
 	}
 }

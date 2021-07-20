@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .waitisit {
 	display: flex;
 	justify-content: space-between;
@@ -12,5 +14,24 @@
 
 	&__img {
 		width: 40%;
+	}
+}
+
+// Query for both portrait and landscape ipad
+@media only screen and (max-device-width: $ipad-landscape-screen-max) {
+	.waitisit {
+		&__des {
+			width: 55%;
+
+			h2,
+			p {
+				line-height: 1.5;
+				margin-bottom: 1rem;
+			}
+		}
+
+		&__img {
+			width: 45%;
+		}
 	}
 }
