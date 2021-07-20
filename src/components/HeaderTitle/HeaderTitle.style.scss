@@ -39,6 +39,8 @@ $text-color: hsl(0, 0%, 40%);
 	$btn-padding: 0.8rem;
 
 	.header-title {
+		padding-right: 20%;
+
 		p,
 		&__btn {
 			font-size: 1rem;
