@@ -8,6 +8,7 @@
 	&__list {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		width: 100%;
 	}
 
@@ -25,5 +26,23 @@
 		padding: 0.5rem 0;
 		display: block;
 		width: fit-content;
+	}
+}
+
+@media only screen and (max-device-width: $ipad-landscape-screen-max) {
+	.menu-links {
+		width: 50%;
+
+		&__links {
+			width: 50%;
+		}
+
+		&__links:nth-of-type(n + 3) {
+			margin-top: 1.5rem;
+		}
+
+		&__link {
+			font-size: $ipad-font;
+		}
 	}
 }
