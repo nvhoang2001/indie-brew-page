@@ -1,3 +1,9 @@
+@import "../../global.scss";
+
+@mixin full-width {
+	width: 100%;
+}
+
 .header-image {
 	min-height: 100vh;
 	display: flex;
@@ -7,5 +13,52 @@
 
 	&__img {
 		width: 50%;
+	}
+}
+
+// Query for portrait ipad
+@media only screen and (max-device-width: $ipad-portrait-screen-max) and (orientation: portrait) {
+	.header-image {
+		flex-direction: column;
+
+		margin: 3rem 0;
+
+		min-height: auto;
+
+		@at-root .header-title {
+			@include full-width();
+
+			font-size: 1.25rem;
+		}
+
+		&__img {
+			position: static;
+			transform: none;
+			order: -1;
+			width: 70%;
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+// Query for landscape ipad
+@media only screen and (max-device-width: $ipad-landscape-screen-max) and (orientation: landscape) {
+	.header-image {
+		flex-direction: column;
+
+		margin: 3rem 0;
+
+		@at-root .header-title {
+			@include full-width();
+			padding-right: 20%;
+		}
+
+		&__img {
+			position: static;
+			transform: none;
+			order: -1;
+			width: 70%;
+			margin-bottom: 1.5rem;
+		}
 	}
 }

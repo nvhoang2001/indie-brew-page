@@ -34,3 +34,23 @@ $text-color: hsl(0, 0%, 40%);
 		font-weight: 500;
 	}
 }
+
+@media only screen and (max-device-width: $ipad-landscape-screen-max) {
+	$btn-padding: 0.8rem;
+
+	.header-title {
+		p,
+		&__btn {
+			font-size: 1rem;
+		}
+
+		&__btn {
+			padding-top: $btn-padding;
+			padding-bottom: $btn-padding;
+		}
+
+		&__members {
+			margin-bottom: 0.5rem;
+		}
+	}
+}

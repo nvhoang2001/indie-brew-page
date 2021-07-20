@@ -3,10 +3,10 @@ import CircleMist from "./sections/Circle-Mist/CircleMist.component";
 import HeaderImage from "./sections/Header-Image/HeaderImage.component";
 import Resources from "./sections/Resources/Resources.component";
 import Waitisit from "./sections/Waitisit/Waitisit.component";
+import Footer from "./sections/Footer/Footer.component";
 
 import "./reset-css.scss";
 import "./App.css";
-import Footer from "./sections/Footer/Footer.component";
 
 function App() {
 	return (

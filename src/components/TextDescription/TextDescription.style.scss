@@ -1,6 +1,13 @@
+@import "../../global.scss";
 $text-color: hsl(0, 0%, 40%);
 
 .text-description {
 	font-size: 0.75rem;
 	color: $text-color;
+}
+
+@media only screen and (max-device-width: $ipad-landscape-screen-max) {
+	.text-description {
+		font-size: 1rem;
+	}
 }
