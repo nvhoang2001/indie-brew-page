@@ -1,4 +1,4 @@
-import Link from "../Link/Link.component";
+import CustomLink from "../Link/CustomLink.component";
 import CustomButton from "../CustomButton/CustomButton.component";
 
 import "./Navigator.style.scss";
@@ -19,7 +19,7 @@ const Navigator = (props) => {
 		<nav className={`navigator ${props.className ? props.className : ""}`}>
 			<ul className="navigator__links">
 				{navItems.map((link) => (
-					<Link key={link.content} className="navigator__link" {...link} />
+					<CustomLink key={link.content} className="navigator__link" {...link} />
 				))}
 			</ul>
 			<CustomButton content="Get Started" subContent="it's free" />
