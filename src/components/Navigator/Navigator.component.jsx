@@ -2,6 +2,7 @@ import CustomLink from "../Link/CustomLink.component";
 import CustomButton from "../CustomButton/CustomButton.component";
 
 import "./Navigator.style.scss";
+import { Link } from "react-router-dom";
 
 const Navigator = (props) => {
 	const navItems = [
@@ -22,7 +23,9 @@ const Navigator = (props) => {
 					<CustomLink key={link.content} className="navigator__link" {...link} />
 				))}
 			</ul>
-			<CustomButton content="Get Started" subContent="it's free" />
+			<Link to={props.linkBtn}>
+				<CustomButton content="Get Started" subContent="it's free" />
+			</Link>
 		</nav>
 	);
 };

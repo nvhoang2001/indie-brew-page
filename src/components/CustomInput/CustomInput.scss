@@ -1,0 +1,32 @@
+@import "../../global.scss";
+
+$input-border: #ccc;
+
+.custom-input {
+	margin: 1rem 0;
+
+	&__label,
+	&__input {
+		font-size: $medium-font;
+	}
+
+	&__label {
+		font-weight: 500;
+	}
+
+	&__input {
+		margin: 0.5rem 0;
+		width: 100%;
+		border: 0.1rem solid $input-border;
+		padding: 0.5rem 0.65rem;
+
+		&.invalid {
+			border-color: red;
+			background: rgba(248, 106, 106, 0.25);
+		}
+	}
+}
+
+input[type="text"] {
+	appearance: text;
+}

@@ -1,0 +1,50 @@
+@import "../../global.scss";
+
+$box-size: 1rem;
+
+$main-background: white;
+
+.sign-up-form {
+	width: 45%;
+	background: $main-background;
+	padding: 6% 5%;
+
+	&__title {
+		font-weight: 500;
+	}
+
+	&__checkbox {
+		display: flex;
+
+		input {
+			margin-right: 0.5rem;
+			width: $box-size;
+			height: $box-size;
+			cursor: pointer;
+		}
+
+		label {
+			font-size: $medium-font;
+		}
+
+		a {
+			color: blue;
+			text-decoration: underline;
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		margin-top: 1rem;
+	}
+}
+
+.error-text {
+	margin-top: 0.25rem;
+	color: rgb(223, 32, 32);
+	font-size: 0.5rem;
+}
+
+input[type="checkbox"] {
+	appearance: checkbox;
+}

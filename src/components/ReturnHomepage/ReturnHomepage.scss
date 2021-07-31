@@ -1,0 +1,28 @@
+$arrow-background: white;
+$arrow-padding: 0.5rem 0.6rem;
+
+.ReturnHomepage {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	&__svg {
+		background-color: $arrow-background;
+		border: 0.1rem solid #9c91a0;
+		border-radius: 0.35rem;
+
+		padding: $arrow-padding;
+		svg {
+			width: auto;
+
+			height: 100%;
+			display: block;
+			margin: auto;
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+	}
+}

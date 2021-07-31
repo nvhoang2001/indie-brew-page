@@ -1,4 +1,4 @@
-import Link from "../Link/Link.component";
+import CustomLink from "../Link/CustomLink.component";
 
 const Links = (props) => {
 	return (
@@ -6,7 +6,7 @@ const Links = (props) => {
 			<h4 className={`${props.baseClassName}__title`}>{props.title}</h4>
 			<ul>
 				{props.links.map((link, index) => (
-					<Link
+					<CustomLink
 						key={`l${index}`}
 						href={link.href}
 						content={link.title}

@@ -3,10 +3,10 @@ import MockupImage from "../../components/MockupImage/MockupImage.component";
 
 import "./HeaderImage.style.scss";
 
-const HeaderImage = () => {
+const HeaderImage = (props) => {
 	return (
 		<section className="header-image">
-			<HeaderTitle />
+			<HeaderTitle linkBtn={props.linkBtn} />
 			<MockupImage className="header-image__img" />
 		</section>
 	);

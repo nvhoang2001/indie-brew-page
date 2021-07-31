@@ -1,0 +1,32 @@
+@import "../global.scss";
+
+$main-background: #efcaff;
+$edge-background: #f9eaff;
+
+body.active {
+	min-height: 100vh;
+
+	background-image: linear-gradient(
+		to bottom right,
+		$edge-background,
+		$main-background,
+		$edge-background
+	);
+	background-repeat: no-repeat;
+}
+
+.sign-up {
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		width: 25%;
+	}
+
+	&__main {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		margin: 3rem 0;
+	}
+}
