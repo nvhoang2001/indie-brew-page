@@ -30,3 +30,12 @@ body.active {
 		margin: 3rem 0;
 	}
 }
+
+@media only screen and (max-device-width: $ipad-landscape-screen-max) {
+	.sign-up {
+		&__main {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+	}
+}

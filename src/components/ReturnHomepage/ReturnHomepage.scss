@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 $arrow-background: white;
 $arrow-padding: 0.5rem 0.6rem;
 
@@ -24,5 +26,27 @@ $arrow-padding: 0.5rem 0.6rem;
 
 	&__text {
 		font-weight: 500;
+	}
+}
+
+@media only screen and (max-device-width: $ipad-landscape-screen-max) {
+	.ReturnHomepage {
+		&__text {
+			font-size: $ipad-font;
+		}
+	}
+}
+
+// Query for landscape phone
+@media only screen and (max-device-width: $phone-landscape-screen-max) and (orientation: landscape) {
+	.ReturnHomepage {
+		justify-content: flex-end;
+	}
+}
+
+// Query for portrait phone
+@media only screen and (max-device-width: $phone-portrait-screen-max) and (orientation: portrait) {
+	.ReturnHomepage {
+		justify-content: flex-end;
 	}
 }

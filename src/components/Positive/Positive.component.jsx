@@ -1,8 +1,9 @@
-import "./Positive.scss";
+import PositiveDetail from "../PositiveDetail/PositiveDetail.component";
+
 import { ReactComponent as balloon } from "../../Assets/balloon.svg";
 import { ReactComponent as lightbulb } from "../../Assets/lightbulb.svg";
 import { ReactComponent as parchment } from "../../Assets/parchment.svg";
-import PositiveDetail from "../PositiveDetail/PositiveDetail.component";
+import "./Positive.scss";
 
 const details = [
 	{

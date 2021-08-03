@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Positive from "../components/Positive/Positive.component";
-import ReturnHomepage from "../components/ReturnHomepage/ReturnHomepage";
+
 import { InputsProvider } from "../contexts/inputcontexts";
+
 import Header from "../sections/Header/Header.component";
+import ReturnHomepage from "../components/ReturnHomepage/ReturnHomepage";
+import Positive from "../components/Positive/Positive.component";
 import SignUpForm from "../sections/SignUpForm/SignUpForm";
+
 import "./SignUp.scss";
 
 const SignUp = () => {
