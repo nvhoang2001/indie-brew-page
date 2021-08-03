@@ -4,6 +4,36 @@
 	width: 100%;
 }
 
+@mixin ipad-header-img($selector) {
+	#{$selector} {
+		flex-direction: column;
+
+		margin: 3rem 0;
+
+		@at-root .header-title {
+			@include full-width();
+
+			font-size: $ipad-font;
+		}
+
+		&__img {
+			position: static;
+			transform: none;
+			order: -1;
+			width: 70%;
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+@mixin mobile-header-img($selector) {
+	#{$selector} {
+		&__img {
+			width: 85%;
+		}
+	}
+}
+
 .header-image {
 	min-height: 100vh;
 	display: flex;
@@ -18,46 +48,26 @@
 
 // Query for portrait ipad
 @media only screen and (max-device-width: $ipad-portrait-screen-max) and (orientation: portrait) {
+	@include ipad-header-img(".header-image");
 	.header-image {
-		flex-direction: column;
-
-		margin: 3rem 0;
-
 		min-height: auto;
-
-		@at-root .header-title {
-			@include full-width();
-
-			font-size: 1.25rem;
-		}
-
-		&__img {
-			position: static;
-			transform: none;
-			order: -1;
-			width: 70%;
-			margin-bottom: 1.5rem;
-		}
 	}
 }
 
 // Query for landscape ipad
 @media only screen and (max-device-width: $ipad-landscape-screen-max) and (orientation: landscape) {
+	@include ipad-header-img(".header-image");
+}
+
+// Query for portrait phone
+@media only screen and (max-device-width: $phone-portrait-screen-max) and (orientation: portrait) {
+	@include mobile-header-img(".header-image");
 	.header-image {
-		flex-direction: column;
-
-		margin: 3rem 0;
-
-		@at-root .header-title {
-			@include full-width();
-		}
-
-		&__img {
-			position: static;
-			transform: none;
-			order: -1;
-			width: 70%;
-			margin-bottom: 1.5rem;
-		}
+		min-height: auto;
 	}
+}
+
+// Query for landscape phone
+@media only screen and (max-device-width: $phone-landscape-screen-max) and (orientation: landscape) {
+	@include mobile-header-img(".header-image");
 }
