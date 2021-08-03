@@ -1,5 +1,26 @@
 @import "../../global.scss";
 
+@mixin mobile-description($selector, $orientation: "portrait") {
+	$font-size: $phone-portrait-font;
+
+	@if $orientation == "landscape" {
+		$font-size: $phone-landscape-font;
+	}
+
+	#{$selector} {
+		margin-top: 2rem;
+
+		&__title {
+			font-size: 2 * $font-size;
+		}
+
+		&__content,
+		a {
+			font-size: $font-size;
+		}
+	}
+}
+
 .description {
 	font-size: 0.75rem;
 	width: 57%;
@@ -28,4 +49,14 @@
 			line-height: 1.5;
 		}
 	}
+}
+
+// Query for portrait phone
+@media only screen and (max-device-width: $phone-portrait-screen-max) and (orientation: portrait) {
+	@include mobile-description(".description");
+}
+
+// Query for landscape phone
+@media only screen and (max-device-width: $phone-landscape-screen-max) and (orientation: landscape) {
+	@include mobile-description(".description", "landscape");
 }

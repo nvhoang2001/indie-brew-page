@@ -1,5 +1,23 @@
 @import "../../global.scss";
 
+@mixin mobile-waitisit($selector, $orientation: "portrait") {
+	#{$selector} {
+		flex-direction: column;
+
+		> div {
+			@if $orientation == "portrait" {
+				width: 100%;
+			} @else {
+				width: 80%;
+			}
+		}
+
+		&__img {
+			order: -1;
+		}
+	}
+}
+
 .waitisit {
 	display: flex;
 	justify-content: space-between;
@@ -34,4 +52,14 @@
 			width: 45%;
 		}
 	}
+}
+
+// Query for portrait phone
+@media only screen and (max-device-width: $phone-portrait-screen-max) and (orientation: portrait) {
+	@include mobile-waitisit(".waitisit");
+}
+
+// Query for landscape phone
+@media only screen and (max-device-width: $phone-landscape-screen-max) and (orientation: landscape) {
+	@include mobile-waitisit(".waitisit", "landscape");
 }
