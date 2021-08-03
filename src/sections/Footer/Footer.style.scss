@@ -1,5 +1,57 @@
+@import "../../global.scss";
+
+@mixin title-font($font-size) {
+	font-size: 1.1 * $font-size;
+}
+
+@mixin content-font($font-size) {
+	font-size: $font-size;
+}
+
+@mixin mobile-footer($selector, $font-size) {
+	#{$selector} {
+		flex-direction: column;
+
+		&-content {
+			max-width: 100%;
+
+			&__title {
+				@include title-font($font-size);
+			}
+
+			&__content,
+			&__maker {
+				@include content-font($font-size);
+			}
+		}
+
+		@at-root .menu-links {
+			margin-top: 2rem;
+			width: 100%;
+
+			&__title {
+				@include title-font($font-size);
+			}
+
+			&__link {
+				@include content-font($font-size);
+			}
+		}
+	}
+}
+
 .footer {
 	padding-bottom: 3rem;
 	display: flex;
 	justify-content: space-between;
+}
+
+// Query for landscape phone
+@media only screen and (max-device-width: $phone-landscape-screen-max) and (orientation: landscape) {
+	@include mobile-footer(".footer", $phone-landscape-font);
+}
+
+// Query for portrait phone
+@media only screen and (max-device-width: $phone-portrait-screen-max) and (orientation: portrait) {
+	@include mobile-footer(".footer", $phone-portrait-font);
 }
