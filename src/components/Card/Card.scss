@@ -1,0 +1,11 @@
+.card {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: white;
+	z-index: 10;
+
+	padding: 3rem;
+	border-radius: 1rem;
+}

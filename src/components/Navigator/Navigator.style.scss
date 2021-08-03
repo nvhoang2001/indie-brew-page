@@ -1,5 +1,35 @@
 @import "../../global.scss";
 
+@mixin mobile-style($selector) {
+	#{$selector} {
+		&__links {
+			flex-direction: column;
+
+			* {
+				font-size: $phone-portrait-font;
+			}
+		}
+
+		&__logo {
+			margin-bottom: 1rem;
+
+			svg {
+				width: 80%;
+			}
+		}
+
+		&__link {
+			padding: 1.5rem 0;
+
+			border-bottom: 0.1rem solid #ccc;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
 .navigator {
 	display: flex;
 
@@ -17,4 +47,14 @@
 		margin: 0 0.5rem;
 		padding: 0 0.5rem;
 	}
+}
+
+// Query for portrait phone
+@media only screen and (max-device-width: $phone-portrait-screen-max) and (orientation: portrait) {
+	@include mobile-style(".navigator");
+}
+
+// Query for landscape phone
+@media only screen and (max-device-width: $phone-landscape-screen-max) and (orientation: landscape) {
+	@include mobile-style(".navigator");
 }

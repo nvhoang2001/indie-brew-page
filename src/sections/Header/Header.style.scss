@@ -1,5 +1,7 @@
 @import "../../global.scss";
 
+$portrait-logo-width: 10rem;
+
 .header {
 	margin-top: 2rem;
 
@@ -16,7 +18,7 @@
 @media only screen and (max-device-width: $ipad-portrait-screen-max) and (orientation: portrait) {
 	.header {
 		&__logo {
-			width: 30%;
+			width: $portrait-logo-width;
 		}
 
 		&__nav {
@@ -33,14 +35,41 @@
 @media only screen and (max-device-width: $ipad-landscape-screen-max) and (orientation: landscape) {
 	.header {
 		&__logo {
-			width: 22.5%;
+			width: $portrait-logo-width;
 		}
 
 		&__nav {
 			width: 60%;
 			justify-content: flex-end;
 			* {
-				font-size: 1rem;
+				font-size: $ipad-font;
+			}
+		}
+	}
+}
+
+// Query for portrait phone
+@media only screen and (max-device-width: $phone-portrait-screen-max) and (orientation: portrait) {
+	.header {
+		&__logo {
+			width: 60%;
+		}
+
+		&__nav {
+			width: 40%;
+			* {
+				font-size: $phone-portrait-font;
+			}
+		}
+	}
+}
+
+// Query for landscape phone
+@media only screen and (max-device-width: $phone-landscape-screen-max) and (orientation: landscape) {
+	.header {
+		&__nav {
+			* {
+				font-size: $phone-landscape-font;
 			}
 		}
 	}
