@@ -7,7 +7,7 @@ $main-background: white;
 @mixin mobile-sign-up-form($selector, $font-size, $orientation: "landscape") {
 	#{$selector} {
 		&__title {
-			font-size: 1.5 * $font-size;
+			font-size: $h2-factor * $font-size;
 		}
 
 		&__checkbox {

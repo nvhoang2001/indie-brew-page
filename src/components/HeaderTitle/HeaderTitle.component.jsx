@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
+
 import TextDescription from "../TextDescription/TextDescription.component";
 import CustomButton from "../CustomButton/CustomButton.component";
 
 import { ReactComponent as MemberImage } from "../../Assets/User Avatars.svg";
 import "./HeaderTitle.style.scss";
-import { Link } from "react-router-dom";
 
 const HeaderTitle = (props) => {
 	const textContent =

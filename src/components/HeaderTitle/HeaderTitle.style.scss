@@ -6,7 +6,7 @@ $text-color: hsl(0, 0%, 40%);
 	#{$selector} {
 		padding-right: 0;
 		&__title {
-			font-size: 5rem;
+			font-size: $h1-factor * $font-size;
 		}
 
 		p,
@@ -44,6 +44,7 @@ $text-color: hsl(0, 0%, 40%);
 		justify-content: flex-start;
 		width: max-content;
 		height: 2.5rem;
+		margin-bottom: 0.5rem;
 	}
 
 	p {
@@ -71,10 +72,6 @@ $text-color: hsl(0, 0%, 40%);
 		&__btn {
 			padding-top: $btn-padding;
 			padding-bottom: $btn-padding;
-		}
-
-		&__members {
-			margin-bottom: 0.5rem;
 		}
 	}
 }

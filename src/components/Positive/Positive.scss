@@ -4,7 +4,7 @@
 	#{$selector} {
 		&__title {
 			margin-bottom: 3rem;
-			font-size: 2 * $font-size;
+			font-size: $h2-factor * $font-size;
 		}
 
 		&-detail {
@@ -34,7 +34,7 @@
 		margin-bottom: 2rem;
 
 		&__title {
-			font-size: 2 * $ipad-font;
+			font-size: $h2-factor * $ipad-font;
 		}
 
 		&-detail {
