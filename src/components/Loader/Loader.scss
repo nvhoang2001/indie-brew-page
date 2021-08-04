@@ -1,0 +1,27 @@
+.loader {
+	&-container {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&::before {
+		content: "Loading...";
+	}
+
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 30px;
+	padding: 0 5px 8px 0;
+	background: repeating-linear-gradient(90deg, currentColor 0 8%, #0000 0 10%) 200% 100%/200% 3px
+		no-repeat;
+	animation: loading 2s steps(6) infinite;
+}
+
+@keyframes loading {
+	to {
+		background-position: 80% 100%;
+	}
+}
