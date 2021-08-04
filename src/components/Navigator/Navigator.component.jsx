@@ -1,21 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 import CustomLink from "../Link/CustomLink.component";
 import CustomButton from "../CustomButton/CustomButton.component";
-
-import { ReactComponent as HamburgerMenu } from "../../Assets/Hamburger Menu.svg";
-import "./Navigator.style.scss";
 import Backdrop from "../Backdrop/Backdrop.component";
-import { useState } from "react";
 import Card from "../Card/Card.component";
 import HomeLogo from "../HomeLogo/HomeLogo";
 
-const phoneLanscapeMaxWidth = 800;
-const phonePortraitMaxWidth = 420;
-
-const landcapePhoneQuery = { maxDeviceWidth: phoneLanscapeMaxWidth, orientation: "landscape" };
-const portraitPhoneQuery = { maxDeviceWidth: phonePortraitMaxWidth, orientation: "portrait" };
+import { ReactComponent as HamburgerMenu } from "../../Assets/Hamburger Menu.svg";
+import { landcapePhoneQuery, portraitPhoneQuery } from "../../config";
+import "./Navigator.style.scss";
 
 const navItems = [
 	{
